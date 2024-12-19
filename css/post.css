@@ -1,0 +1,659 @@
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+}
+
+.slider img {
+    width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+}
+
+.slider .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+	background:#eee;
+}
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: #333;
+}
+
+a:hover,
+a:active{
+	text-decoration: none;
+}
+
+@keyframes swiper-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+#swiper-container {
+    overflow: hidden;
+}
+
+#swiper-container img {
+    animation: swiper-animation 10s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+/*＝＝共通＝＝*/
+
+body {
+	color: #082b48;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	line-height: 1.5;
+  }
+  
+  img {
+	width: 50%;
+	height: auto;
+  }
+  
+  a {
+	text-decoration: none;
+	color: #082b48;
+  }
+  
+  
+  
+  /*---top---*/
+  
+  .top {
+	background-size: cover;
+	padding: 100px 0;
+	  background-color:#070A31;/*背景色*/
+  }
+  
+  
+  .top-title {
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: -20px;
+  }
+  
+  .top-subtitle {
+	font-size: 18px;
+	text-align: center;
+  }
+  
+  /*---section 共通クラス---*/
+  
+  .section {
+	padding: 60px 0;
+  }
+  
+  .section-title {
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+  }
+  
+  /*---about---*/
+  
+  .about-left {
+	float: left;
+	width: 48%;
+  }
+  
+  .about-right {
+	float: right;
+	width: 48%;
+  }
+  
+  /*----course----*/
+  
+  .course-item {
+	display: inline-block;
+	width: 30%;
+	justify-content: space-around;
+  }
+  
+  .course {
+	  background-color:#070A31;/*背景色*/
+  
+  }
+  
+  /*---contact---*/
+  
+  p {
+	text-align: center;
+	margin-bottom: 20px;
+  }
+  
+  input[type="email"] {
+	width: 600px;
+	font-size: 18px;
+	display: block;
+	margin: auto;
+	padding: 15px;
+	border-radius: 999px;
+	border: 3px solid #d8d8d8;
+  }
+  
+  
+  .btn {
+	padding: 20px 60px;
+	display: inline-block;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 4px;
+	background-color: #ec6d64;
+	display: block;
+	margin: auto;
+	margin-top: 5%;
+  }
+  
+  
+  /*---footer---*/
+  
+  
+  
+  .footer__center {
+	background-color: #082b48;
+	  color: #fff;
+	  padding: 20px 0;
+	  font-size: 12px;
+	}
+  
+  
+  
+  
+  
+  
+  
+  
+	
+  
+	/*---トップ---*/
+  
+	.top {
+	  padding: 120px 0;
+	}
+  
+	.top-title {
+	  font-size: 32px;
+	}
+  
+	.top-subtitle {
+	  font-size: 14px;
+	}
+  
+	/*---セクション---*/
+  
+	.section {
+	  padding: 80px 0;
+	}
+  
+	.section-title {
+	  font-size: 24px;
+	  font-weight: bold;
+	}
+  
+	.section p {
+	  font-size: 14px;
+	}
+  
+  
+  .container {
+	text-align: center;
+  }
+  
+  img {
+	text-align: center;
+  }
+  
+  
+  /*========= LoadingのためのCSS ===============*/
+  
+  /* Loading背景画面設定　*/
+  #splash {
+	  /*fixedで全面に固定*/
+	  position: fixed;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 999;
+	  background:#fff;
+	  text-align:center;
+	  color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+	  width:260px;
+  }
+  
+  /* fadeUpをするアイコンの動き */
+  
+  .fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+	from {
+	  opacity: 0;
+	  transform: translateY(100px);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  
+  /*========= レイアウトのためのCSS ===============*/
+  
+  #wrapper{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  text-align:center;
+	  color: #fff;
+  }
+  
+  a{
+	  color: #fff;
+  }
+  
+  /*========= particle js を描画するエリア設定 ===============*/
+  
+  html,body{
+	  height: 100%;/*高さを100%にして描画エリアをとる*/
+  }
+  
+  #particles-js{ 
+	  position:fixed;/*描画固定*/
+	  z-index:-1;/*描画を一番下に*/
+	  width: 100%;
+	  height: 100%;
+	  background-color:#070A31;/*背景色*/
+  }
+  
+  #wrapper{
+	  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	  z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	  width:100%;
+	  height: 100%;
+  }
+  
+  .navbar-toggler-icon {
+	width: 100px;
+	height: auto;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*---スマホ表示---*/
+  
+  @media only screen and (max-width:767px) {
+  
+  
+  /*＝＝共通＝＝*/
+  
+  body {
+	color: #082b48;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	line-height: 1.5;
+  }
+  
+  img {
+	width: 60%;
+	height: auto;
+  }
+  
+  a {
+	text-decoration: none;
+	color: #082b48;
+  }
+  
+  
+  
+  /*---top---*/
+  
+  .top {
+	background-size: cover;
+	padding: 100px 0;
+	  background-color:#070A31;/*背景色*/
+  }
+  
+  
+  .top-title {
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: -20px;
+  }
+  
+  .top-subtitle {
+	font-size: 18px;
+	text-align: center;
+  }
+  
+  /*---section 共通クラス---*/
+  
+  .section {
+	padding: 60px 0;
+  }
+  
+  .section-title {
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+  }
+  
+  /*---about---*/
+  
+  .about-left {
+	float: left;
+	width: 48%;
+  }
+  
+  .about-right {
+	float: right;
+	width: 48%;
+  }
+  
+  /*----course----*/
+  
+  .course-item {
+	display: inline-block;
+	width: 30%;
+	justify-content: space-around;
+  }
+  
+  .course {
+	  background-color:#070A31;/*背景色*/
+  
+  }
+  
+  /*---contact---*/
+  
+  p {
+	text-align: center;
+	margin-bottom: 20px;
+  }
+  
+  input[type="email"] {
+	width: 600px;
+	font-size: 18px;
+	display: block;
+	margin: auto;
+	padding: 15px;
+	border-radius: 999px;
+	border: 3px solid #d8d8d8;
+  }
+  
+  
+  .btn {
+	padding: 20px 60px;
+	display: inline-block;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 4px;
+	background-color: #ec6d64;
+	display: block;
+	margin: auto;
+	margin-top: 5%;
+  }
+  
+  
+  /*---footer---*/
+  
+  
+  
+  .footer__center {
+	background-color: #082b48;
+	  color: #fff;
+	  padding: 20px 0;
+	  font-size: 12px;
+	}
+  
+  
+  
+  
+  
+  
+  
+  
+	
+  
+	/*---トップ---*/
+  
+	.top {
+	  padding: 120px 0;
+	}
+  
+	.top-title {
+	  font-size: 32px;
+	}
+  
+	.top-subtitle {
+	  font-size: 14px;
+	}
+  
+	/*---セクション---*/
+  
+	.section {
+	  padding: 80px 0;
+	}
+  
+	.section-title {
+	  font-size: 24px;
+	  font-weight: bold;
+	}
+  
+	.section p {
+	  font-size: 14px;
+	}
+  
+  
+  .container {
+	text-align: center;
+  }
+  
+  img {
+	text-align: center;
+  }
+  
+  
+  /*========= LoadingのためのCSS ===============*/
+  
+  /* Loading背景画面設定　*/
+  #splash {
+	  /*fixedで全面に固定*/
+	  position: fixed;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 999;
+	  background:#fff;
+	  text-align:center;
+	  color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+	  width:260px;
+  }
+  
+  /* fadeUpをするアイコンの動き */
+  
+  .fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+	from {
+	  opacity: 0;
+	  transform: translateY(100px);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  
+  /*========= レイアウトのためのCSS ===============*/
+  
+  #wrapper{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  text-align:center;
+	  color: #fff;
+  }
+  
+  a{
+	  color: #fff;
+  }
+  
+  /*========= particle js を描画するエリア設定 ===============*/
+  
+  html,body{
+	  height: 100%;/*高さを100%にして描画エリアをとる*/
+  }
+  
+  #particles-js{ 
+	  position:fixed;/*描画固定*/
+	  z-index:-1;/*描画を一番下に*/
+	  width: 100%;
+	  height: 100%;
+	  background-color:#070A31;/*背景色*/
+  }
+  
+  #wrapper{
+	  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	  z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	  width:100%;
+	  height: 100%;
+  }
+  
+  
+  
+  
+  }
+  
+  
